@@ -1,0 +1,39 @@
+<css-doodle click-to-update>
+@grid: @p(3,4,5) / 80vmin;
+:container {
+  gap: 4px;
+}
+transform: rotate(@p(0, 90, 180, 270)deg);
+background-image: @doodle(
+  @grid: @p(1, 2, 3) / 100%;
+  :container {
+    gap: 4px;
+  }
+  transform: rotate(@p(0, 90, 180, 270)deg);
+  background:
+    @m(@r4, (radial-gradient(circle at @pn(0, 100, 100, 0)% @pn(0, 100, 0, 100)%, @p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC) calc(35.36% - 2px), #000 calc(35.36% - 1.5px), #000 calc(35.36% + 2px), transparent calc(35.36% + 2.5px)))),
+    linear-gradient(@p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC), @lp);
+  @random(0.2) {
+    background:
+      linear-gradient(@p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC) calc(50% - 2px), #000 calc(50% - 1.5px), #000 calc(50% + 2px), @p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC) calc(50% + 2.5px));
+  }
+  @random(0.2) {
+    background:
+      @m(@r2, (radial-gradient(circle at @pn(0, 100)% 50%, @p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC) calc(44.3% - 2px), #000 calc(44.3% - 1.5px), #000 calc(44.3% + 2px), transparent calc(44.3% + 2.5px)))),
+      linear-gradient(@p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC), @lp);
+  }
+  @random(0.2) {
+    background:
+      radial-gradient(circle at 0 50%, @p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC) calc(44.3% - 2px), #000 calc(44.3% - 1.5px), #000 calc(44.3% + 2px), transparent calc(44.3% + 2.5px)),
+      radial-gradient(circle at 100% @p(0, 100%), @p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC) calc(35.36% - 2px), #000 calc(35.36% - 1.5px), #000 calc(35.36% + 2px), transparent calc(35.36% + 2.5px)),
+      linear-gradient(@p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC), @lp);
+  }
+  @random(0.2) {
+    --color: @p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC);
+    background:
+      @m(2, (linear-gradient(@pn(180, 90)deg, @pn(transparent, var(--color)) calc(100% - 4px), #000 calc(100% - 4px)) no-repeat 0 0 / calc(50% + 2px) calc(50% + 2px))),
+      @p(radial-gradient(circle at 0 0, @p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC) calc(35.36% - 2px), #000 calc(35.36% - 1.5px), #000 calc(35.36% + 2px), transparent calc(35.36% + 2.5px)), linear-gradient(@m2(transparent))),
+      linear-gradient(@p(#689FC0, #CF6756, #543235, #F6C7C8, #ECBB3F, #4B639D, #5A8863, #DE7970, #FDF9CC), @lp);
+  }
+);
+</css-doodle>
